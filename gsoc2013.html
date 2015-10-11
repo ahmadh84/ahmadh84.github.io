@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<p>Computer Vision is a field where complexity of the problem really matters. </p>
+<p>I think OpenCV at the moment lacks some key unsupervised image segmentation methods (superpixels). I usually avoid OpenCV when I know I would need superpixels for the system I am building. Here is what I propose to implement in OpenCV:
+<ol>
+<li><strong>Normalized-Cuts</strong> [1] - this is one of the most well-studied over-segmentation algorithms out of there. It is basically a spectral clustering algorithm - so it would be useful for other clustering applications.</li>
+<li><strong>Felzenszwalb and Huttenlocher</strong> [2] - arguably the most used superpixel method out there. I think the reason for its popularity lies in its simplicity. Moreover, unlike Normalized cuts, its space/time complexity allows working on large images.</li>
+<li><strong>SLIC Superpixels</strong> [3] - A new method which creates superpixels by linear iterative clustering (uses k-means with a limited search space). This would stand as a state-of-the-art method for generating superpixels.</li>
+</ol>
+
+The nice thing about these methods is the ability to play around with the affinity measures between two pixels. We can supply a color, intensity, distance, and even an RGBD based affinity function.</p>
+
+<p>One might ask why implement (2) when (3) already beats the others in performance (see Table 1 [3])? I think (2) is a good step toward having a streaming video segmentation algorithm inside OpenCV. Both Grundmann et al. and Xu et al. [4,5] use (2) as a basis for doing hierarchical video segmentation. When implementing (2), I will make sure it is later extensible to videos.</p>
+
+<p>
+[1] J. Shi, J. Malik, "Normalized Cuts and Image Segmentation," PAMI 2000<br />
+[2] P. Felzenszwalb, D. Huttenlocher, "Efficient Graph-Based Image Segmentation," IJCV 2004 <br />
+[3] R. Achanta, A. Shaji, K. Smith, A. Lucchi, P. Fua, "SLIC Superpixel Compared to State-of-Art Superpixels Methods," PAMI 2012 <br />
+[4] M. Grundmann, V. Kwatra, M. Han, I. Essa, "Efficient Hierarchical Graph-Based Video Segmentation," CVPR 2010 <br />
+[5] C. Xu, C. Xiong, J. Corso, "Streaming Hierarchical Video Segmentation," ECCV 2012 </p>
+
+
+<strong>Bio</strong>:
+I have researched in Computer Vision for a couple of years now. I received my M.S. in Computer Graphics, Vision and Imaging from University College London in 2010 for which I won the Microsoft Research Project Prize and BBC Best Overall Student Prize. I joined the Computational Perception Lab at Georgia Tech in 2011 as a Ph.D. student in computer vision under Dr. Jim Rehg. My research interests are in the use of motion cues for perception, applying machine learning to video data and discrete optimization techniques for video segmentation. webpage: <a href="http://www.cc.gatech.edu/~ahumayun/">http://www.cc.gatech.edu/~ahumayun/</a>
+</body>
+</html>
