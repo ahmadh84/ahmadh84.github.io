@@ -17,7 +17,7 @@ body {
 #divIntroduction {
 	text-align: left;
 	color: #B9B9B9;
-	font-size: 11.5px;
+	font-size: 13px;
 	padding: 15px;
 	font-family: Geneva, Arial, Helvetica, sans-serif;
 }
@@ -35,16 +35,17 @@ body {
 	color: #CC6600;
 	font-weight: bold;
 }
-#divOverviewHead {
+.overviewHead {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	font-weight: bold;
+	font-size: 16px;
 	color: #FFFFFF;
 }
-#divOverviewHead a {
+.overviewHead a {
 	color: #FFFFD0;
 	text-decoration: none;
 }
-#divOverviewHead a:hover {
+.overviewHead a:hover {
 	color: #FFFFFF;
 	text-decoration: underline;
 }
@@ -62,23 +63,24 @@ body {
 	color: #FFFFFF;
 	text-decoration: underline;
 }
+.divSection {
+	float:left;
+	clear:both;
+}
 #divPublicationsHead {
-	width: 507px;
-	float: left;
+	/*width: 507px;
+	float: left;*/
 	background-color: #2DB962;
 	padding: 10px;
 }
 #divPublications {
-	width: 507px;
-	float: left;
-	background-color: #318FAF;
-	padding: 10px;
-	height: 280px;
-	color: #FFFFFF;
+	/*width: 507px;
+	float: left;*/
 }
-#divPubContent {
+.divContent {
+	width: 770px;
+	padding: 10px;
 	position:relative;
-	height:275px;
 	overflow:auto;
 	-webkit-border-radius:3px;
 	-moz-border-radius:3px;
@@ -87,18 +89,28 @@ body {
 	float:left;
 	clear:both;
 }
-#divPublications ul {
+#divPubContent {
+	background-color: #318FAF;
+	height: 280px;
+	color: #FFFFFF;
+	padding-bottom: 17px;
+}
+#divPubContent ul {
 	margin-left: 0px;
 	padding-left: 5px;
 	list-style-type: disc;
 }
-#divPublications li {
+#divPubContent li {
 	border-left-width: medium;
 	border-left-style: solid;
 	border-left-color: #216176;
-	margin-bottom: 25px;
+	margin-bottom: 18px;
 	list-style-type: none;
 	padding-left: 10px;
+	min-height: 60px;
+}
+.divPublicationsTxt {
+	padding-top: 6px;
 }
 #divCurrentProjectsHead {
 	width: 243px;
@@ -125,8 +137,8 @@ body {
 	padding-left: 10px;
 }
 #divPastProjectsHead {
-	width: 243px;
-	float: right;
+	/*width: 243px;
+	float: right;*/
 	background-color: #1E7C42;
 	padding: 10px;
 }
@@ -135,25 +147,18 @@ body {
 	float: left;
 	border: 0px;
 }
-
-#divPastProjects {
-	width: 243px;
+#divPastProjectsContent {
+	/*width: 243px;
 	float: right;
+	height: 280px;*/
 	background-color: #205D72;
 	padding: 10px;
-	height: 280px;
 	color: #FFFFFF;
 }
-
-#divPastProjects ul {
-	margin-left: 0px;
+.divPastProject {
+	margin: 8px 10px 8px 10px;
 	padding-left: 5px;
-	margin-top: 10px;
-}
-#divPastProjects li {
-	margin-bottom: 15px;
-	list-style-type: none;
-	padding-left: 10px;
+	float:left;
 }
 #divFooter {
 	color: #757575;
@@ -167,6 +172,7 @@ body {
 	padding-right: 10px;
 	padding-bottom: 12px;
 	padding-left: 10px;
+	clear: both;
 }
 #divFooter img {
 	vertical-align: -8%;
@@ -188,15 +194,15 @@ body {
 	padding-left: 2px;
 }
 .imgPaper {
-	width: 47px;
-	height: 47px;
+	width: 60px;
+	height: 60px;
 	float: left;
     margin: 0px 10px 0px 0px;
 	border: 0px;
 }
 #divDissertation {
 	font-size: 13px;
-	padding: 0px 0px 0px 20px;
+	padding: 0px 0px 0px 10px;
 }
 #divDissertation a {
 	color: #FFFFD0;
@@ -204,7 +210,10 @@ body {
 }
 #divDissertation li {
 	list-style-type: none;
-	margin-bottom: 50px;
+	margin-bottom: 35px;
+}
+.divDissertationTxt {
+	padding-top: 10px;
 }
 .imgDissertation {
 	width: 100px;
