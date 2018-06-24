@@ -70,7 +70,7 @@ body {
 #divPublicationsHead {
 	/*width: 507px;
 	float: left;*/
-	background-color: #2DB962;
+	background-color: #2FBE65;
 	padding: 10px;
 }
 #divPublications {
@@ -90,10 +90,10 @@ body {
 	clear:both;
 }
 #divPubContent {
-	background-color: #318FAF;
+	background-color: #3397BA;
 	height: 280px;
 	color: #FFFFFF;
-	padding-bottom: 17px;
+	padding-bottom: 20px;
 }
 #divPubContent ul {
 	margin-left: 0px;
@@ -160,6 +160,32 @@ body {
 	padding-left: 5px;
 	float:left;
 }
+#divNotesHead {
+	/*width: 507px;
+	float: left;*/
+	background-color: #249C51;
+	padding: 10px;
+}
+#divNotesContent {
+	background-color: #2B81A0;
+	height: 243px;
+	color: #FFFFFF;
+	padding-bottom: 17px;
+}
+#divNotesContent ul {
+	margin-left: 0px;
+	padding-left: 0px;
+}
+#divNotesContent li {
+	list-style-type: none;
+	padding-left: 20px;
+	margin-bottom: 15px;
+	min-height: 82px;
+}
+.divNotesTxt {
+	padding-top: 0px;
+	padding-left: 188px;
+}
 #divFooter {
 	color: #757575;
 	background-color:#111111;
@@ -200,6 +226,27 @@ body {
     margin: 0px 10px 0px 0px;
 	border: 0px;
 }
+.divImgNotes {
+	position: relative;
+	width: 70px;
+	height: 91px;
+	max-width: 70px;
+	max-height: 91px;
+	overflow: hidden;
+	padding: 0px;
+    margin: -7px -2px -7px -7px;
+	float: left;
+}
+.imgNotes {
+	position: absolute;
+	width: 70px;
+	height: 91px;
+	clip: rect(7px, 62px, 82px, 7px);
+/*
+	top: -7px;
+	left: -7px;
+*/
+}
 #divDissertation {
 	font-size: 13px;
 	padding: 0px 0px 0px 10px;
@@ -235,4 +282,8 @@ body {
 	padding-right: 2px;
 	padding-bottom: 1px;
 	padding-left: 2px;
+}
+.divAdjacentTxts {
+	display:flex;
+	flex-wrap:nowrap;
 }
