@@ -1,0 +1,324 @@
+\documentclass[10pt,twoside,a4paper]{article}
+
+%\usepackage{showframe}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue,pdfborder={0 0 0}]{hyperref}
+\usepackage[left=1.3cm, right=1.3cm, twoside, includeheadfoot=true]{geometry}
+\usepackage{relsize}
+\usepackage{datetime}
+
+\newdateformat{monthyeardate}{%
+  \monthname[\THEMONTH] \THEYEAR}
+
+% toggles whether detailed CV or resume
+\newif\ifdetail
+\detailtrue % or
+% \detailfalse
+
+\titleformat{\section}[hang]
+{\normalfont\large\scshape}{}{0em}
+{}
+[\vspace{0ex}%
+\titlerule]
+
+\ifdetail
+	\titlespacing{\section}{0pt}{0.3cm}{0cm}
+\else
+	\titlespacing{\section}{0pt}{0.1cm}{0cm}
+\fi
+
+\fancypagestyle{empty}{%
+\fancyhf{} % clear all header and footer fields
+\renewcommand{\headrulewidth}{0pt}
+\ifdetail
+	\fancyfoot[R]{Page \thepage \hspace{1pt} of \pageref{LastPage}} % except the right foot
+\fi
+}
+
+% title page format
+\pagestyle{fancy}
+\makeatletter
+  \lhead[Ahmad Humayun]{R{\'e}sum{\'e} --- \monthyeardate\today}
+  \rhead[R{\'e}sum{\'e} --- \monthyeardate\today]{Ahmad Humayun}
+  \cfoot{}
+  \rfoot{Page \thepage \hspace{1pt} of \pageref{LastPage}}
+  \renewcommand{\headrulewidth}{1.5pt}
+\makeatother
+
+\makeatletter
+\def\thickhrulefill{\leavevmode \leaders \hrule height 1pt\hfill \kern \z@}
+\renewcommand{\maketitle}{%
+	\thispagestyle{empty}
+	\begin{center}\leavevmode
+		\normalfont
+		\begin{minipage}[t][0.6cm][l]{0.655\textwidth}
+			{\Huge\@title\par}%
+		\end{minipage}
+		\hfil
+		\begin{minipage}[t][0.6cm][l]{0.335\textwidth}
+			\raisebox{10pt}{
+				\begin{tabular}[t]{l l@{\hspace*{0in}}}%
+					 \@author
+				\end{tabular}
+			}
+		\end{minipage}
+	\end{center}
+}
+\makeatother
+
+% define a way to nicely write \CPP
+\newcommand\CPP{C\nolinebreak[4]\hspace{-.05em}\raisebox{.4ex}{\relsize{-3}{\textbf{++}}}}
+
+\title{\textbf{Ahmad Humayun}}
+\author{\multicolumn{2}{l}{85 $5^{\text{th}}$ Street NW, Atlanta, GA 30332} \\ {\large\Mobilefone} & +1 (404) 398-5465}
+
+% set paragraph spacing and indentation
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+
+\begin{document}
+
+\ifdetail
+	\newgeometry{top=1.2cm, bottom=2cm, left=1.3cm, right=1.3cm, twoside}
+\else
+	\newgeometry{top=0.9cm, bottom=0.8cm, left=1.3cm, right=1.3cm, twoside}
+\fi
+
+\maketitle
+
+\vspace{-0.2cm}
+\hspace*{-0.25cm} \begin{tabular}[t]{l@{\hspace*{0.25cm}} l@{\hspace*{1.7cm}} l@{\hspace*{0.25cm}} l@{\hspace*{1.7cm}} l@{\hspace*{0.25cm}} l}%
+{\large\Letter} & \href{mailto:ahumayun@cc.gatech.edu}{ahumayun@cc.gatech.edu} & {\large\Keyboard} & \textsf{\href{http://ahumayun.com/}{http://ahumayun.com/}} & \raisebox{-0.03cm}{\includegraphics[scale=0.35]{linkedin.png}} & \textsf{\href{http://linkedin.com/in/ahmadhumayun}{http://linkedin.com/in/ahmadhumayun}}
+\end{tabular}
+
+
+\ifdetail
+	\vspace{0.1cm}
+\else
+	\vspace{0.0cm}
+\fi
+\section{Awards \& Achievements}
+\textbf{Microsoft Research Project Prize} for best MSc. Computer Graphics, Vision and Imaging thesis at UCL (2010).
+
+\textbf{BBC Best Overall Student Prize} in MSc. Computer Graphics, Vision and Imaging at UCL (2010).
+
+\textbf{Software Design Finalist} for \textbf{Microsoft Imagine Cup 2007 Korea}. The project on Automated Video Recording of Lectures (AVRiL) was selected to represent Pakistan for the first time in this prestigious invitational.
+
+\ifdetail \textbf{Mentor Graphics Project Award} for AVRiL - best BSc. senior year project (2007). \fi
+
+%Cambridge \textbf{O Level Distinction} in \textbf{Computer Science}, for the Islamabad Region (2001).
+
+
+\section{Education}
+\begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}} l r@{\hspace*{0in}} }
+\textbf{Georgia Institute of Technology}  \ifdetail\else \;-\; Ph.D. CS, School of Interactive Computing \fi  & Aug. '11 - April '18 \\
+\ifdetail Ph.D. Computer Science, School of Interactive Computing  & \\ \fi
+\end{tabular*}
+
+\begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}} l r@{\hspace*{0in}} }
+\textbf{University College London} (UCL)  \ifdetail\else \;-\; MSc. CG, Vision and Imaging - \textit{Distinction} \fi  & Sept. '09 - Sept. '10 \\
+\ifdetail MSc. Computer Graphics, Vision and Imaging - \textit{Distinction} & \\ \fi
+\end{tabular*}
+
+\begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}} l r@{\hspace*{0in}} }
+\textbf{Lahore University of Management Sciences} (LUMS)  \ifdetail\else \;-\; BSc. Computer Eng. - \textit{High Merit} \fi  & Aug. '03 - July '07 \\
+\ifdetail BSc. (Hons.). Computer Engineering (Major) - \textit{High Merit} & \\ \fi
+\end{tabular*}
+
+
+\section{Professional Experience}
+\begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}} p{0.80\textwidth} r@{\hspace*{0in}} }
+\textbf{Vicarious FPC, Inc.} \hspace{0.5mm} \small\textit{Team Lead, and Researcher}, Neural Network Vision. 
+& Sept. '18 - to date
+\end{tabular*}
+
+\begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}} p{0.80\textwidth} r@{\hspace*{0in}} }
+\textbf{Georgia Institute of Technology} \hspace{0.5mm} \small\textit{Graduate Research Assistant}, Computational Perception Lab. 
+%(\href{http://www.cc.gatech.edu/cpl/}{cc.gatech.edu/cpl/}) 
+& Aug. '11 - April '18
+\end{tabular*}
+
+\begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}} p{0.80\textwidth} r@{\hspace*{0in}} }
+\textbf{Facebook AI Research\small, Menlo Park} \hspace{0.5mm} \small\textit{Research Intern} with Manohar Paluri and Piotr Doll{\'a}r
+& May '15 - July '15
+\end{tabular*}
+
+\begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}} p{0.80\textwidth} r@{\hspace*{0in}} }
+\textbf{Microsoft Research\small, Redmond} \hspace{0.5mm} \small\textit{Research Intern}, Multimedia, Interaction, \& Communication group
+& May '14 - July '14
+\end{tabular*}
+
+\begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}} p{0.80\textwidth} r@{\hspace*{0in}} }
+\textbf{The University of Warwick} \hspace{0.5mm} \small \textit{Research Associate}, Dept. of Computer Science & Sept. '10 - Dec. '10
+\end{tabular*}
+
+\ifdetail
+\begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}} p{0.80\textwidth} r@{\hspace*{0in}} }
+\textbf{Lahore University of Management Sciences} \hspace{0.5mm} \small \textit{Research Associate}, Dept. of Computer Science %\newline Researching on tracking techniques with special interest in occlusion resolution. 
+%This research has been a collaboration between LUMS, National Institute of Medical Research, London, and University of Illinois at Chicago (partly funded by NSF - Award No. 0534438). 
+& Jan. '07 - July '09
+\end{tabular*}
+\fi
+
+\ifdetail
+\begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}} p{0.80\textwidth} r@{\hspace*{0in}} }
+\textbf{MobileWeaver ApS} \hspace{0.5mm} \small \textit{Junior Software Developer}, Technical Department & March '08 - Jan. '09
+\end{tabular*}
+\fi
+
+
+\section{\ifdetail \else Selected \fi Publications}
+{
+\small
+\ifdetail
+\textbf{Iterative Machine Teaching}. \ifdetail ($3^{\text{rd}}$ author) \newline \fi
+\textit{\ifdetail International Conference on Machine Learning (ICML) \else ICML \fi} - Aug. '17.
+\href{http://ahumayun.com/pubs/liu_ICML_2017_itermteach.pdf}{ahumayun.com/pubs/itermteach17} %
+\fi
+
+\ifdetail
+\textbf{Multiple-Instance Video Segmentation with Sequence-Specific Object Proposals}. \ifdetail ($3^{\text{rd}}$ author) \newline \fi
+\textit{\ifdetail The 2017 DAVIS Challenge on Video Object Segmentation - CVPR Workshops \else 2017 DAVIS Workshop CVPR \fi} - July '17.
+\href{http://ahumayun.com/pubs/shaban_CVPRDavis_2017_vidsegobjprop.pdf}{ahumayun.com/pubs/davisvid17} %
+\fi
+
+\textbf{The Middle Child Problem: \ifdetail\else{\scriptsize\fi Revisiting Parametric Min-cut and Seeds for Object Proposals \ifdetail\else}\fi}. \ifdetail ($1^{\text{st}}$ author) \newline \fi
+\textit{\ifdetail International Conference on Computer Vision (ICCV) \else ICCV \fi} - Dec. '15. 
+\href{http://rehg.org/poise}{rehg.org/poise} %
+
+\ifdetail
+\textbf{Finding Temporally Consistent Occlusion Boundaries in Videos using Geometric Context}. ($2^{\text{nd}}$ author) \newline \textit{IEEE Winter Conference on Applications of Computer Vision (WACV)} - Jan. '15. \href{http://cpl.cc.gatech.edu/projects/temporaloccl/}{cpl.cc.gatech.edu/projects/temporaloccl/} %tinyurl.com/nsv9eam
+\fi
+
+\textbf{RIGOR: Recycling Inference in Graph Cuts for generating Object Regions}. \ifdetail ($1^{\text{st}}$ author) \newline \fi \textit{\ifdetail IEEE Conference on Computer Vision and Pattern Recognition (CVPR) \else CVPR \fi} - June '14. \href{http://cpl.cc.gatech.edu/projects/RIGOR/}{\ifdetail cpl.cc.gatech.edu/projects/RIGOR/ \else tinyurl.com/ll6oocq \fi}
+
+\textbf{Video Segmentation by Tracking Many Figure-Ground Segments}. \ifdetail ($3^{\text{rd}}$ author) \newline \fi \textit{\ifdetail International Conference on Computer Vision (ICCV) \else ICCV \fi} - Dec. '13. \href{http://www.cc.gatech.edu/~fli/SegTrack2/}{\ifdetail cc.gatech.edu/$\sim$fli/SegTrack2/ \else tinyurl.com/opl4rjs \fi}
+
+\textbf{Learning a Confidence Measure for Optical Flow}. \ifdetail ($2^{\text{nd}}$ author) \newline \fi \textit{\ifdetail IEEE Transactions on Pattern Analysis and Machine Intelligence (PAMI) \else IEEE PAMI \fi} - May '13. \href{http://visual.cs.ucl.ac.uk/pubs/flowConfidence/}{\ifdetail visual.cs.ucl.ac.uk/pubs/flowConfidence \else tinyurl.com/pw76l9g \fi}
+
+\ifdetail
+\textbf{A Novel Paradigm for Mining Cell Phenotypes in Multi-Tag Bioimages \newline using a Locality Preserving Nonlinear Embedding}. ($2^{\text{nd}}$ author) \newline \textit{International Conference on Neural Information Processing (ICONIP)} - Nov. '12. \href{http://ahumayun.com/pubs/khan_ICONIP_2012_cellembedding.pdf}{ahumayun.com/pubs/cellembed12} %tinyurl.com/pkxnjf3
+\fi
+
+\textbf{RAMTaB: Robust Alignment of Multi-Tag Bioimages}. \ifdetail ($2^{\text{nd}}$ author) \newline \fi \textit{PLoS ONE} - Feb. '12. \href{http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0030894}{\ifdetail journals.plos.org/plosone/article?id=10.1371/journal.pone.0030894 \else tinyurl.com/otm3gly \fi}
+
+\ifdetail
+\textbf{A Framework for Molecular Co-Expression Pattern Analysis \newline in Multi-Channel Toponome Fluorescence Images}. ($1^{\text{st}}$ author) \newline \textit{Microscopy Image Analysis with Apps. in Biology (MIAAB)} - Sept. '11. \href{http://ahumayun.com/pubs/humayun_MIAAB_2011_coexpressiontis.pdf}{ahumayun.com/pubs/coexprstis11} %tinyurl.com/p83yx8s
+\fi
+
+\ifdetail
+}
+\clearpage
+\newgeometry{top=2cm, bottom=2cm, left=1.3cm, right=1.3cm, twoside}
+\section{Publications {\small(\textit{Contd.})}}
+{
+\small
+\fi
+
+\ifdetail
+\textbf{Towards Protein Network Analysis Using TIS Imaging and Exploratory Data Analysis}. ($3^{\text{rd}}$ author) \newline \textit{Workshop on Computational Systems Biology (WCSB)} - June '11. \href{http://ahumayun.com/pubs/langenkamper_WCSB_2011_tisdataanalysis.pdf}{ahumayun.com/pubs/tisdata11} %tinyurl.com/pfktj5o
+\fi
+
+\textbf{Learning to Find Occlusion Regions}. \ifdetail ($1^{\text{st}}$ author) \newline \fi \textit{\ifdetail IEEE Conference on Computer Vision and Pattern Recognition (CVPR) \else CVPR \fi} - June '11. \href{http://visual.cs.ucl.ac.uk/pubs/learningOcclusion/}{visual.cs.ucl.ac.uk/pubs/learningOcclusion/}
+
+\textbf{Myosin Motors Drive Long Range Alignment of Actin Filaments}. \ifdetail ($3^{\text{rd}}$ author) \newline \fi \textit{\ifdetail Journal of Biological Chemistry \else J. of Bio. Chemistry \fi} - Feb. '10. \href{http://www.jbc.org/content/285/7/4964.abstract}{\ifdetail www.jbc.org/content/285/7/4964.abstract \else tinyurl.com/p52xt48 \fi}
+}
+
+\ifdetail
+\else
+\vspace{-0.4cm}
+\fi
+
+
+\section{Research Projects}
+\textbf{Video Object Detection} at Georgia Institute of Technology (\textit{Ph.D. thesis}) \newline
+Currently researching on combining motion and appearance cues for localization in video. The goal is to develop deep architectures for generating proposals amenable for detecting and tracking objects. \underline{Tools}: Lua Torch, Python, \CPP
+
+\textbf{Incremental Learning Inspired by Developmental Psychology} at Georgia Institute of Technology (\textit{Ph.D. thesis}) \newline
+Introduced an incremental learning paradigm where the learner sees a streaming set of concepts without any labeling. This is supported by a novel data-generator which can produce any number of synthetic videos of objects. \underline{Tools}: PyTorch
+
+\textbf{Optimization for Object Segmentation} at Georgia Institute of Technology (as \textit{Ph.D. student}) \newline
+Research on combinatoric optimization techniques for object segmentation in videos and images. \underline{Tools}: \textsc{Matlab}, \CPP
+
+\textbf{Video Supervision for Generating Video Proposals} at Facebook AI Research \newline
+\ifdetail Research on generating video \else Video \fi proposals by unsupervised discovery of objects in large scale video datasets. \underline{Tools}: \textsc{Matlab}, Python, \CPP, \ifdetail Javascript, PHP \fi
+
+\ifdetail
+\textbf{Object Proposals for CT Images} at Georgia Institute of Technology (as \textit{Ph.D. student}) \newline
+Supervising a project for generating segmentation proposals in 3D CT scans, leading to detection of organs.
+\fi
+
+\textbf{Crowd Tracking with Multiple Depth Sensors} at Microsoft Research \newline
+Developed a large area, crowd tracking system by fusing data from multiple depth sensors. \underline{Tools}: \textsc{Kinect SDK}, \CPP
+
+\textbf{Detecting Occluded Regions} at UCL (\textit{MSc. thesis})\newline
+Worked on a supervised learning method to detect regions of occlusion in a two frame sequence. \underline{Tools}: \textsc{Matlab}
+
+\textbf{Tracking Techniques using Object's Shape Cues} at LUMS \newline
+\ifdetail Researched tracking techniques for accurate generation of trajectories using object's non-rigid shape descriptors, resilient to occlusion. This was partly funded by NSF. \else Tracking for accurate trajectory generation using non-rigid shape descriptors. \fi (\href{http://ahumayun.com/crspd.html}{ahumayun.com/crspd}) \underline{Tools}: \textsc{Matlab}
+
+\textbf{Molecular Pattern Analysis of Cancerous Colon Cells} at The University of Warwick \newline
+\ifdetail A multi-disciplinary project for the detection of cancerous tissue. We developed registration and non-linear embedding techniques for analysis of tissues from a multidimensional imaging process. \else Detection of cancerous tissue by non-linear embedding of multidimensional microscopy images. \fi \underline{Tools}: \textsc{Matlab}
+
+\textbf{Automated Video Recording of Lectures - AVRiL} at LUMS (\textit{senior year project}) \newline
+Developed an automated \textit{director} that captures a multi-camera lecture environment. %The participants were tracked using computer vision and sound localization techniques. %The system made use of multiple cameras and mathematically modeled direction heuristics for production. 
+(\href{http://avril.sproj.com}{avril.sproj.com}) \underline{Tools}: OpenCV%, \textsc{.Net}
+
+\ifdetail
+\textbf{Improvements in Google's MapReduce Architecture} at LUMS \newline
+Research enabling MapReduce to run speculatively on skewed input data. (\href{https://code.google.com/p/mrplus/}{tinyurl.com/q3detyg}) \underline{Tools}: Python, \textsc{Hadoop}
+%Google's data processing architecture, 
+\fi
+
+\ifdetail
+\textbf{Surveillance Video Compression through Foveation} as a \textit{research initiative} \newline
+Researched the development of a novel H.264 encoder which assigns more bits to areas where the human visual system is more likely to foveate in surveillance footage. (\href{http://suraj.lums.edu.pk/~foveation}{http://suraj.lums.edu.pk/\(\sim\)foveation}) \underline{Tools}: \textsc{Java} Media Framework
+\fi
+
+\section{Skills \& Interests}
+\textit{Proficient in} Python, Lua, \textsc{\CPP}, \textsc{Matlab}, Torch, OpenCV \hspace{3mm}\textbar\hspace{3mm} Rock climbing, solving puzzles, and cycling.
+
+\ifdetail
+\section{References}
+\hspace*{-0.25cm} \begin{tabular}{l}
+% Referee 1
+\begin{minipage}[t]{4in}
+\textbf{James M. Rehg}\\[0.2em]
+Professor, School of Interactive Computing,\\
+Georgia Institute of Technology\\
+%85 $5^{\text{th}}$ Street NW,\\
+%Atlanta, GA 30332\\
+%United Stated of America\\
+\Telefon\ +1 (404) 894-9105\\
+\Letter\ \href{mailto:rehg@cc.gatech.edu}{rehg\textrm{@}cc.gatech.edu}
+\end{minipage}
+\\
+\\
+% Referee 2
+\begin{minipage}[t]{4in}
+\textbf{Gabriel J. Brostow}\\[0.2em]
+Associate Professor, Dept. of Computer Science,\\
+University College London\\
+%Gower Street, London WC1E 6BT\\
+%United Kingdom\\
+\Telefon\ +44 (0)20 3108 7120\\
+\Letter\ \href{mailto:brostow@cs.ucl.ac.uk}{brostow\textrm{@}cs.ucl.ac.uk}
+\end{minipage}
+\end{tabular}
+\fi
+
+\end{document}
