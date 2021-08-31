@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Machine Learning Primer - Workshop</title>
+<style>
+html {margin: 0 auto; max-width: 550px;}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {padding: 5px;}
+h2 {margin-top: 20pt; margin-bottom: 5pt;}
+h3 {margin-top: 20pt; margin-bottom: 5pt;}
+.col1-left td:nth-child(1) {text-align: center;}
+.col2-right td:nth-child(2) {text-align: left;}
+.lab-cell {background-color: #CCCCCC}
+</style>
+</head>
+
+<body>
+<h1 style="text-align: center;">Machine Learning Primer - Workshop</h1>
+
+<p>This workshop is an extremely brief introduction to Machine Learning (ML). It is meant to give you a taste of what problems and solutions look like in ML - and where can it be applied (short answer: almost everywhere!). This 3 day workshop is meant to be interactive and hands-on. We will spend significant time each day coding ML algorithms, and applying them to example data. Hopefully this would give you a good starting point for your future ML explorations! :)</p>
+
+<p>We'll mostly cover Gradient Descent; Linear Regression; Logistic Regression (Classification); optimizing cost functions; and Neural Networks.</p>
+
+
+<h2>Pre-requisites</h2>
+Even though I'll try to explain all topics from first principles - some background knowledge is expected if you want to get the most out of the workshop:
+<ul>
+	<li><b>Calculus</b>: you should be able to answer questions like "what is the derivative of <i>x</i> with respect to <i>y</i>?"</li>
+    <li><b>Linear Algebra</b>: Basic knowledge of matrices, and simple manipulations like taking the transpose would be expected.</li>
+    <li><b>Programming</b>: We will be doing our tutorials in <b style="color: red;">Python (numpy)</b>. I'll be doing a basic tutorial on Python syntax, so you should be alright if you are familiar with C/C++, Java, Matlab, etc.</li>
+</ul>
+
+
+<h2>Notes</h2>
+<i>To be uploaded soon!</i>
+
+
+<h2>Exercises / Code</h2>
+<i>To be uploaded soon!</i>
+
+
+<h2>Schedule</h2>
+<p>The times given per topic are rough estimates - but we'll try to keep each day around 3hrs 15mins. We'll break for 20 minutes somewhere in the middle of each day.</p>
+
+<p style="background-color: #CCCCCC">All gray cells will be a hands-on tutorial.</p>
+
+<h3>Day 1</h3>
+<table style="width: 100%" class="col1-left col2-right">
+    <colgroup>
+       <col span="1" style="width: 10%;">
+       <col span="1" style="width: 90%;">
+    </colgroup>
+
+    <!-- Put <thead>, <tbody>, and <tr>'s here! -->
+    <tbody>
+    	<tr><td></td><td><b>Description</b></td></tr>
+        <tr><td>1</td><td>Python refresher (20mins)</td></tr>
+        <tr><td>2</td><td>What is Machine Learning (ML)? (10-15mins)</td></tr>
+        <tr><td></td><td>a. Supervised / Unsupervised Learning</td></tr>
+        <tr><td></td><td>b. Regression / Classification</td></tr>
+        <tr><td>3</td><td>Fitting a function to data (5mins)</td></tr>
+        <tr><td>4</td><td>What's a cost function (5mins)</td></tr>
+        <tr><td>5</td><td>Gradient descent = the best thing since sliced bread! (10mins)</td></tr>
+        <tr><td>6</td><td>Single variable regresion (20mins)</td></tr>
+        <tr><td colspan="2">Break (20 mins)</td></tr>
+        <tr><td>7</td><td>Convexity + optimizing convex functions (10mins)</td></tr>
+        <tr><td>8</td><td>Gradient descent (learning rate) (20mins)</td></tr>
+        <tr><td>9</td><td>How does regression extend to multiple variables (10mins)</td></tr>
+        <tr class="lab-cell"><td>10</td><td>Implement gradient descent for multi-variable regression (1hr)</td></tr>
+    </tbody>
+</table>
+
+<h3>Day 2</h3>
+<table style="width: 100%" class="col1-left col2-right">
+    <colgroup>
+       <col span="1" style="width: 10%;">
+       <col span="1" style="width: 90%;">
+    </colgroup>
+
+    <!-- Put <thead>, <tbody>, and <tr>'s here! -->
+    <tbody>
+    	<tr><td></td><td><b>Description</b></td></tr>
+        <tr><td>1</td><td>Logistic regression (10mins)</td></tr>
+        <tr><td>2</td><td>Logistic regression hypothesis function (10mins)</td></tr>
+        <tr><td>3</td><td>What is a decision boundary? (10mins)</td></tr>
+        <tr><td>4</td><td>Logistic regression to convex optimization (10mins)</td></tr>
+        <tr><td>5</td><td>Gradient descent for logistic regression (20mins)</td></tr>
+        <tr class="lab-cell"><td>6</td><td>Implement gradient descent for logistic regression (30mins)</td></tr>
+        <tr><td colspan="2">Break (20 mins)</td></tr>
+        <tr><td>7</td><td>Why do we need Regularization? (10-15mins)</td></tr>
+        <tr><td>8</td><td>Applying regularization to linear regression (10mins)</td></tr>
+        <tr class="lab-cell"><td>9</td><td>Add regularization to logistic regression (30mins)</td></tr>
+        <tr><td>10</td><td>Convexity + optimizing convex functions (10mins)</td></tr>
+        <tr><td>11</td><td>What is a Neural Network? (20mins)</td></tr>
+        <tr><td>12</td><td>Non-linearities to build complex non-convex functions</td></tr>
+    </tbody>
+</table>
+
+<h3>Day 3</h3>
+<table style="width: 100%" class="col1-left col2-right">
+    <colgroup>
+       <col span="1" style="width: 10%;">
+       <col span="1" style="width: 90%;">
+    </colgroup>
+
+    <!-- Put <thead>, <tbody>, and <tr>'s here! -->
+    <tbody>
+    	<tr><td></td><td><b>Description</b></td></tr>
+        <tr><td>1</td><td>Multiple layers of a Neural Network (10mins)</td></tr>
+        <tr><td>2</td><td>Cost function for Neural Networks (15mins)</td></tr>
+        <tr><td>3</td><td>Back-propagation for optimizing neural networks (20mins)</td></tr>
+        <tr><td>4</td><td>Deriving back-propagation (20mins)</td></tr>
+        <tr><td colspan="2">Break (20 mins)</td></tr>
+        <tr class="lab-cell"><td>5</td><td>Implement a NN and back-propagation from scratch (1hr)</td></tr>
+        <tr class="lab-cell"><td>6</td><td>Tensorflow primer (30min)</td></tr>
+        <tr><td>8</td><td>What is Bias / Variance? (10mins)</td></tr>
+        <tr><td>9</td><td>How to deal with Bias / Variance issues (10mins)</td></tr>
+    </tbody>
+</table>
+
+<h2>Resources</h2>
+<p style="color: green;">Credit where credit is due. Most of this course is designed around <a href="https://www.coursera.org/learn/machine-learning">Andrew Ng's Coursera Machine Learning course</a></p>
+
+Some more resources if you want to explore Machine Learning further:
+<ul>
+	<li><a href="http://www.cs.cmu.edu/~ninamf/courses/601sp15/lectures.shtml">CMU's Machine Learning course</a></li>
+    <li><a href="http://cs229.stanford.edu/">Stanford's Machine Learning course</a></li>
+    <li><a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-036-introduction-to-machine-learning-fall-2020/">MIT Introduction to Machine Learning (w/ lecture videos)</a></li>
+	<li><a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0002-introduction-to-computational-thinking-and-data-science-fall-2016/index.htm">MIT Introduction to Computational Thinking and Data Science (w/ lecture videos)</a></li>
+</ul>
+ 
+</body>
+</html>
